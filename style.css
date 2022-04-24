@@ -1,0 +1,229 @@
+:root {
+    margin: 0;
+    padding: 10px;
+    --backg: white;
+    --font: black;
+    --font1: blue;
+    --font2: green;
+    --font3: red;
+    --font4: yellow;
+    --font5: lightblue;
+}
+
+body {
+  background-color: var(--backg);
+  color: var(--font);
+}
+
+/* dark mode */
+.dark-theme {
+  --backg: black;
+  --font: white;
+  --font1: green;
+  --font2: blue;
+  --font3: yellow;
+  --font4: red;
+  --font5: lightgrey;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+#contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#main-doc{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    overflow: auto;
+}
+
+#navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    border:  1px solid var(--font);
+    order: 1;
+}
+
+header {
+    padding: 20px 0;
+    padding-left: 20px;
+}
+
+#head {
+    font-size: 30px;
+}
+
+a:link {
+    color: var(--font);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--font2);
+}
+a:hover {
+    color: var(--font3);
+}
+a:active {
+    color: var(--font4);
+}
+p {
+    margin: 10px 0;
+    padding-left: 40px;
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+
+li {
+    padding-left: 40px;
+    list-style: inside;
+}
+
+table {
+    width: 95%;
+    height: 60px;
+    margin-left: 60px;
+    background-color: lightgray;
+}
+td {
+    padding-left: 10px;
+}
+.tr {
+    width: 90%;
+    height: 30px;
+    margin-left: 80px;
+    background-color: lightgrey;
+}
+
+.circle {
+    list-style: circle inside;
+    padding-top: 5px;
+}
+.circle1 {
+    list-style: circle inside;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.circle2 {
+    padding-bottom: 5px;
+}
+
+section#reference {
+    margin-bottom: 30px;
+}
+.nav-link {
+    margin-top: 0;
+    padding: 10px 0;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--font);
+}
+#navbar header {
+    border-bottom: 1px solid var(--font);
+    padding-bottom: 20px;
+}
+.nav-link .over {
+    border-top: 1px solid var(--font);
+}
+/*Media query para tablet y cel phones*/
+@media only screen and (max-width: 768px) {
+/*hero*/
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 10px solid var(--font);
+    background: var(--backg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border: 1px solidblack;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+#contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    overflow: auto;
+    padding-left: 20px;
+    border-right: 2px solid black;
+    background-color: var(--backg);
+    z-index: 2;
+}
+
+#main-doc{
+    position: relative;
+    overflow: auto;
+    top: 250px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+}
+
+/*top link*/
+
+.top-link {
+  font-size: 1.25rem;
+  margin: auto;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--font5);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: .25rem;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: visible;
+  z-index: 100;
+}
